@@ -1,0 +1,44 @@
+---> basics
+
+it is not a programming language
+it is a markup langauage specifies the layout and style of a document
+it cnosists of a set of markup tags
+html uses markup tags to describe web pages
+html tags are keywords surrounded by angle brackets like <html>
+most html tags normally comes in pairs like <b> and </b>.
+
+
+---> a simple html document is given below
+<html>
+    <head>
+        <title> This is my first HTML page</title>
+    </head>
+    <body>
+        <h1>Hello world</h1>
+    </body>
+</html>
+
+
+saves in .html extensions
+
+---> HTML ELements
+    html document are defined by HTML ELements
+    an html element is everything from he start tag to the end tag.
+    eg:     <p>hello</p>
+    an html elements domsists of start tag, end tag, and element content
+    empty elements are closed in the start  tag itself.
+    most html elements an have attributes.
+        eg:  src attribute of img tag.
+    
+--->HTML attribute
+    it provides additional information about HTML elements
+    they are always specified in the start tag.
+    it comes in name/value pair like name='value'
+    eg:     HTML links are defined with <a> tag and the link address is provided as an attribute href like 
+                <a href="https://www.tu.edu.np">BSC.csit<a/>
+    always lower case
+
+
+
+
+
