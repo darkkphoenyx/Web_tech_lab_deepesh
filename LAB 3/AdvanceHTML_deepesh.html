@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance HTML</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to HTML5 Demo</h1>
+      <nav class="nav">
+        <a href="#hero-section">Home</a>
+        <a href="#about-section">About</a>
+        <a href="#contact-section">Contact</a>
+      </nav>
+    </header>
+    <main id="hero-section">
+      <section id="about-section">
+        <div>
+          <h2 class="about-h2">About HTML5</h2>
+        </div>
+        <div class="article">
+          <article class="article1">
+            HyperText Markup Language (HTML) is the basic scripting language
+            used by web browsers to render pages on the World Wide Web.
+            HyperText allows a user to click a link and be redirected to a new
+            page referenced by that link.
+          </article>
+          <img
+            class="image1"
+            src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901778.jpg?semt=ais_hybrid"
+            alt="HTML5 image"
+          />
+        </div>
+      </section>
+      <section id="media-section">
+        <h2 class="media-h2">Multimedia</h2>
+        <!-- video element -->
+        <div class="media-elements">
+          <video
+            src="./Matterport_Virtual_Tour_of_Amazing_Home___Real_Estate_3D_Virtual_Tours(1080p).mp4"
+            height="300px"
+            autoplay
+            muted
+            controls
+            loop
+          >
+            Virtual Tour
+          </video>
+          <audio
+            src="./The_Coding_Music____Fast_Beat_Programming_Coding_Music_Vol._1(128k).m4a"
+            controls
+            autoplay
+            loop
+          >
+            Your B
+          </audio>
+        </div>
+      </section>
+      <section id="contact-section">
+        <h1 class="container-h`">Contact Us</h1>
+        <div class="container">
+          <form action="/submit" method="POST" class="form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br />
+            <input class="submit" type="submit" value="Send Message" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
