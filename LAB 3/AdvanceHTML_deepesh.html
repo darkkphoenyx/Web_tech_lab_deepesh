@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advance HTML</title>
+    <title>Advance HTML</title> 
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="header">
       <h1>Welcome to HTML5 Demo</h1>
       <nav class="nav">
-        <a href="#hero-section">Home</a>
         <a href="#about-section">About</a>
+        <a href="#multimedia-section">Multimedia</a>
+        <a href="#canvas-section">Canvas</a>
         <a href="#contact-section">Contact</a>
       </nav>
     </header>
@@ -34,10 +35,10 @@
           />
         </div>
       </section>
-      <section id="media-section">
+      <section id="multimedia-section">
         <h2 class="media-h2">Multimedia</h2>
-        <!-- video element -->
         <div class="media-elements">
+          <!-- video element -->
           <video
             src="./Matterport_Virtual_Tour_of_Amazing_Home___Real_Estate_3D_Virtual_Tours(1080p).mp4"
             height="300px"
@@ -45,21 +46,73 @@
             muted
             controls
             loop
-          >
-            Virtual Tour
-          </video>
+          ></video>
           <audio
             src="./The_Coding_Music____Fast_Beat_Programming_Coding_Music_Vol._1(128k).m4a"
             controls
-            autoplay
             loop
-          >
-            Your B
-          </audio>
+          ></audio>
         </div>
       </section>
+      <br />
+      <section id="canvas-section">
+        <h2>Canvas Section</h2>
+        <div class="canvas-main">
+          <div class="btn-elements">
+            <button class="btn" onclick="drawCircle()">Draw Circle</button>
+            <button class="btn" onclick="removeCircle()">Reset Canvas</button>
+          </div>
+          <canvas id="myCanvas"></canvas>
+        </div>
+      </section>
+      <br />
+      <section id="events-section">
+        <h2>HTML Events</h2>
+        <form onsubmit="return handleSubmit(event)">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            onchange="handleChange(event)"
+          />
+          <button class="btn">Submit</button>
+        </form>
+        <br />
+        <button
+          class="btn"
+          id="btn-hover-event"
+          onmouseover="showTooltip()"
+          onmouseout="hideTooltip()"
+        >
+          Hover Me
+        </button>
+        <span id="tooltip" style="display: none; color: red">Tooltip Text</span>
+        <br />
+        <div>
+          <input
+            class="type-something"
+            type="text"
+            placeholder="Type Something..."
+            onkeydown="handleKeydown(event)"
+            onkeyup="handlKeyup(event)"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- aside -->
+    <aside>
+      <p>
+        This is an aside section, which is often used for related content or
+        advertisements.
+      </p>
+    </aside>
+
+    <br />
+    <footer>
       <section id="contact-section">
-        <h1 class="container-h`">Contact Us</h1>
+        <h1 class="container-h1">Contact Us</h1>
         <div class="container">
           <form action="/submit" method="POST" class="form">
             <label for="name">Full Name:</label>
@@ -73,8 +126,51 @@
             <br />
             <input class="submit" type="submit" value="Send Message" />
           </form>
+          <br />
+          <p>
+            Contact us at:
+            <a href="#">deepesh@darkkphoenyx.com.us</a>
+          </p>
         </div>
       </section>
-    </main>
+    </footer>
   </body>
+  <script>
+    //canvas function
+    function drawCircle() {
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(200, 100, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    function showTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = "inline"; // Make the tooltip visible
+    }
+
+    function hideTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = "none"; // Hide the tooltip
+    }
+
+    //clear canvas
+    function removeCircle() {
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+    }
+    //form event handlers
+    function handleSubmit(event) {
+      event.perventDefault();
+      alert("From Submitted!");
+    }
+
+    function handleChange(event) {
+      alert(`Input changed to: ${event.target.value}`);
+    }
+  </script>
 </html>

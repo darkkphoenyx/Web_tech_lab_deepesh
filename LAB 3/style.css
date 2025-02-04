@@ -125,3 +125,80 @@ body {
     }
   }
 }
+
+#multimedia-section {
+  padding: 20px;
+
+  .media-elements {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 90%;
+    justify-self: center;
+  }
+}
+
+#canvas-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .canvas-main {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 1rem;
+
+    .btn-elements {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    #myCanvas {
+      border-radius: 10px;
+      border: 0.5px solid gray;
+    }
+  }
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(128, 128, 128, 0);
+  background-color: #4964ff;
+  color: white;
+  font-size: medium;
+  width: max-content;
+}
+
+.btn:active {
+  background-color: #0026ff;
+  transform: translateY(1px);
+  transition: all;
+}
+
+#events-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  #name {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 0.5px solid gray;
+  }
+
+  #btn-hover-event:hover {
+    background-color: #0026ff;
+  }
+
+  .type-something {
+    outline: none;
+    padding: 5px;
+    width: 80%;
+  }
+}

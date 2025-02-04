@@ -10,7 +10,7 @@
       <h2>Forms</h2>
       <form
         action="#"
-        onsubmit="submitform(event)"
+        onsubmit="submitForm(event)"
         style="
           display: flex;
           flex-direction: column;
@@ -19,7 +19,7 @@
           padding: 10px;
           width: 500px;
         "
-        id="Userform"
+        id="UserForm"
       >
         <label for="username">Username</label>
         <input type="text" id="username" name="username" />
@@ -87,6 +87,11 @@
     </div>
   </body>
   <script>
-    function submitform(event) {}
+    function submitForm(event) {
+            event.preventDefault();
+            const formData = new FormData(document.getElementById('UserForm'));
+            const entries = Array.from(formData.entries());
+            alert('Form Submitted Successfully!\n' + entries.map(([key, value]) => `${key}: ${value}`).join('\n'));
+        }
   </script>
 </html>
