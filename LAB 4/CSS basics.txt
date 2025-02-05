@@ -1,0 +1,6 @@
+Fundamentals and styling basics onjectives:
+
+
+1. To understand CSS syntax and how to insert CSS using inline, internal and external methods
+2. To apply styling using CSS selectors(ID,class) and explore properties like colors, background, borders, text, fonts and more.
+3. To learn the CSS Box model and how to create layouts using padding, margins, and borders.

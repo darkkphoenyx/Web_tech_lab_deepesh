@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- internal CSS -->
+    <style>
+      /* universal selector */
+      * {
+        border-radius: 10px;
+      }
+      .internal-css {
+        font-size: 18px;
+        border: 1px solid green;
+        margin: 5px;
+        padding: 5px;
+      }
+      .internal-css p {
+        color: green;
+      }
+      #id-selector {
+        border-width: 1px;
+        color: red;
+        border-style: dotted;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>CSS Basics has been covered here</p>
+
+    <!-- inserting CSS -->
+    <!-- 1. Inline -->
+    <h3>Inline CSS</h3>
+    <p style="font-size: 16px; color: blue">
+      CSS is used to add styling to HTML elements. Here we demonstrate the
+      concept of Inline CSS. CSS properties are added to start tag of HTML.
+    </p>
+
+    <!-- 2. Internal CSS -->
+    <div class="internal-css">
+      <h3>Internal CSS</h3>
+      <p>
+        Internal CSS are used to style the HTML elements within same HTML page.
+        Inside the header section we declare our CSS properties in style tag.
+        Here we are using class selector.
+      </p>
+    </div>
+    <div id="id-selector">
+      <h3>Representing ID selector</h3>
+      <p>
+        Id selectors are used to select and HTML element with corresponding ID
+        in the HTML. We use # operator for ID selector.
+      </p>
+    </div>
+
+    <!-- 3. External CSS -->
+    <div class="external-css">
+      <h3>External CSS</h3>
+      <p>
+        External CSS is used to style HTML elements outside of HTML document.
+        For this we link our CSS file using link tag.
+      </p>
+    </div>
+
+    <!-- CSS Box model -->
+    <div class="css-box">
+      This is a BOX model
+      <br />
+      margin: 30px; padding:30px;
+    </div>
+  </body>
+</html>

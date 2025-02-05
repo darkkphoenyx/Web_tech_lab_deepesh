@@ -1,0 +1,11 @@
+.external-css {
+  border: 2px dotted green;
+  margin: 5px;
+  padding: 5px;
+}
+
+.css-box {
+  border: 2px solid blue;
+  margin: 30px;
+  padding: 30px;
+}
