@@ -9,3 +9,86 @@
   margin: 30px;
   padding: 30px;
 }
+
+.fonts {
+  border-width: 10px;
+  border-style: dashed groove dotted double;
+  border-color: red;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fonts p {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+#text {
+  border: 1px solid blue;
+  padding: 5px;
+}
+
+#text h3 {
+  color: brown;
+  text-align: center;
+  text-decoration: wavy underline;
+}
+
+#text p {
+  color: green;
+  text-align: justify;
+  text-shadow: 2px 2px 5px black;
+  /* x-axis y-axis blur-radius color */
+  text-indent: 20px;
+  text-transform: lowercase;
+  background-color: beige;
+}
+
+.list {
+  .sub-list {
+    list-style: upper-roman;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  background-color: lightgreen;
+  width: 400px;
+}
+
+table td {
+  border-radius: 0;
+}
+
+/* text wrap */
+
+.container {
+  border: 2px solid blue;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
+.wrap {
+  text-wrap: wrap;
+}
+
+.nowrap {
+  text-wrap: nowrap;
+}
+
+.balanced {
+  text-wrap: balance;
+}
+
+.scrolling {
+  border-radius: 0;
+  width: 400px;
+  height: 150px;
+  scroll-behavior: smooth;
+  scrollbar-width: 50px;
+  overflow-y: scroll;
+}
