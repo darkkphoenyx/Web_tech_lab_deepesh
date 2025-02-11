@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 200vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 50px #ff6600;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: orangered;
+  cursor: pointer;
+}
+
+.nav-elements {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-elements a {
+  text-decoration: none;
+  color: white;
+  font-weight: 550;
+}
+
+.nav-elements a:hover {
+  color: orangered;
+}
+
+.search-box {
+  background-color: white;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  padding: 5px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+}
+
+main {
+  margin-top: 12vh;
+  padding: 0 30px;
+}
