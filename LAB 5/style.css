@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 50px #ff6600;
-  z-index: 1000;
+  z-index: 10;
   margin-bottom: 10px;
 }
 
@@ -59,9 +59,31 @@ body {
 .search-box input {
   border: none;
   outline: none;
+  padding: 6px;
 }
 
-main {
-  margin-top: 12vh;
+.search-box .div-icon {
+  color: orangered;
+}
+
+.container-section {
   padding: 0 30px;
+  background-color: #ff9c5a;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 50px;
+  float: right;
+}
+.sticky-section {
+  margin: 20px 30px;
+  position: sticky;
+  background-color: #ff6600;
+  border-radius: 10px;
+  padding: 10px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
