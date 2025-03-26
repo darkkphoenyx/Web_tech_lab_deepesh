@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #bulb {
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Javascript Variable</p>
+
+    <div id="bulb" onclick="on()"><p style="cursor: pointer;">Click Here!</p></div>
+
+    <script>
+      //indetifiers are case sensitive
+
+      //variable decalration
+      var x = 10;
+      let y = 20;
+      const z = 100;
+      console.log(x);
+      console.log(y);
+      console.log(z);
+
+      //datatypes in JavaScript
+      /*
+      1 numbers
+      2 string
+      3 boolean
+      4 object
+      5 array
+      6 null
+      7 undefined
+      8 symbol
+      */
+
+      //number
+      let num1 = 451;
+      let num2 = 2.5;
+      let num3 = 0.5e3;
+      let num4 = 0.5e-3;
+      console.log(num1);
+      console.log(num2);
+      console.log(num3);
+      console.log(num4);
+
+      //string
+      let string1 = "hello";
+      let string2 = "world";
+
+      console.log(string1 + " " + string2);
+      console.log(`string1 has length: ${string1.length}`);
+      console.log(`string1 has "${string1[3]}" on index 3`);
+
+      //boolean
+      let boolean1 = true;
+      console.log(boolean1);
+
+      //object
+      let object1 = {
+        name: "hiro",
+        age: 9000,
+        username: "hiroTheDevil",
+      };
+      console.log(object1);
+      console.log(object1["age"]); //if we give in [] the pass it as a string
+
+      //null
+      let n = null;
+      console.log(n);
+
+      //undefined
+      let u;
+      console.log(u);
+
+      //symbol
+      let sym1 = Symbol("hello");
+      let sym2 = Symbol("hello");
+      console.log(sym1);
+      console.log(sym2);
+      console.log(sym1 == sym2);
+
+      //array
+      let array1 = ["hello", 1, 2, 3, 24, 34, 43, 45];
+      console.log(array1);
+
+      //type conversion
+      let num5 = 10;
+      let string3 = "20";
+      console.log(num5 + string3); //implicit  --> in case of + it changes num5 into string
+      console.log(num5 * string3); //implicit  --> in case of * it changes string3 into number
+      console.log(num5 + parseInt(string3));
+
+      //alert, confirm, prompt ??
+      const bulbStatus = document.getElementById("bulb");
+      let isOn = 0;
+      function on() {
+        if (isOn === 0) {
+          isOn = 1;
+          bulbStatus.style.backgroundColor = "yellow";
+        } else {
+          bulbStatus.style.backgroundColor = "white";
+          isOn = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

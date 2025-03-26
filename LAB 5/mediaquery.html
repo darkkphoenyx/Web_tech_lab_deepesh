@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* create four equal columns that float next to each other. */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 25px;
+      }
+
+      /* clear float after the column  */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* media query */
+      /* On screen that are 992px or less, go four column to two column layout */
+      @media screen and (max-width: 992px) {
+        .column {
+          width: 50%;
+        }
+      }
+
+      /* On screen that are 600px or less, then make it as a stack layout */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Responsive four column</h4>
+    <p>
+      <strong>Resize the browser window to see the responsive effect.</strong
+      ><br />On the screen that are 992px wide or less, the columns will resize
+      from four column to two column. <br />
+      On screens that are 600px or less, then the column will be on top of each
+      other.
+    </p>
+    <div class="row">
+      <div class="column" style="background-color: yellow">
+        <h2>Column 1</h2>
+        <p>Some text....</p>
+      </div>
+      <div class="column" style="background-color: green">
+        <h2>Column 2</h2>
+        <p>Some text....</p>
+      </div>
+      <div class="column" style="background-color: blue">
+        <h2>Column 3</h2>
+        <p>Some text....</p>
+      </div>
+      <div class="column" style="background-color: red">
+        <h2>Column 4</h2>
+        <p>Some text....</p>
+      </div>
+    </div>
+  </body>
+</html>
