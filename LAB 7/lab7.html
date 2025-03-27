@@ -17,9 +17,12 @@
     </style>
   </head>
   <body>
-    <p>Javascript Variable</p>
+    <h2>Javascript Lab</h2>
+    <p>Check the console for the JavaScript usage</p>
 
-    <div id="bulb" onclick="on()"><p style="cursor: pointer;">Click Here!</p></div>
+    <div id="bulb" onclick="on()">
+      <p style="cursor: pointer">Click Here!</p>
+    </div>
 
     <script>
       //indetifiers are case sensitive
@@ -97,11 +100,133 @@
       //type conversion
       let num5 = 10;
       let string3 = "20";
+      let string4 = "20.5";
       console.log(num5 + string3); //implicit  --> in case of + it changes num5 into string
       console.log(num5 * string3); //implicit  --> in case of * it changes string3 into number
       console.log(num5 + parseInt(string3));
+      console.log(num5 + parseFloat(string4));
 
-      //alert, confirm, prompt ??
+      //operators
+
+      //Arithmetic operators
+      let num6 = 10;
+      let num7 = 90;
+      let res;
+      console.log("Addition", num6 + num7);
+      console.log("Subtraction", num6 - num7);
+      console.log("Multiplication", num6 * num7);
+      console.log("Division", num6 / num7);
+      console.log("Modulus", num6 % num7);
+      console.log("Pre-Increment", ++num6);
+      console.log("Post-Increment", num6++);
+      console.log("Pre-Decrement", --num6);
+      console.log("Post-Decrement", num6--);
+
+      //comparision operators
+      console.log("10 == 90", num6 == num7);
+      console.log("10 != 90", num6 != num7);
+      console.log("10 > 90", num6 > num7);
+      console.log("10 < 90", num6 < num7);
+
+      //logical operators
+      console.log("10 > 90 && 10 < 100", num6 > num7 && num6 < 100);
+      console.log("10 > 90 || 10 < 100", num6 > num7 || num6 < 100);
+      console.log("!(10 > 90)", !(num6 > num7));
+      console.log("!(10 < 90)", !(num6 < num7));
+
+      //assignment operators
+      num6 += 10;
+      console.log(num6);
+      num6 -= 10;
+      console.log(num6);
+      num6 *= 10;
+      console.log(num6);
+      num6 /= 10;
+      console.log(num6);
+      num6 %= 10;
+      console.log(num6);
+      num6 **= 10;
+      console.log(num6);
+
+      //conditional operators
+      var age = 20;
+      if (age >= 18) console.log("You are eligible to vote");
+      else console.log("You are not eligible to vote");
+
+      //ternary operator
+      age >= 20
+        ? console.log("You are allowed to drive")
+        : console.log("You are not allowed to drive");
+
+      //switch case
+      var color = "red";
+      switch (color) {
+        case "red": {
+          console.log("Stop the Car");
+          break;
+        }
+        case "yellow": {
+          console.log("Be ready to go");
+          break;
+        }
+        case "green": {
+          console.log("GO GO GO");
+          break;
+        }
+        default:
+          console.log("Not a traffic light color");
+      }
+
+      //looping
+      //for loop
+      for (let i = 1; i < 5; i++) {
+        console.log(i);
+      }
+      //while
+      let i = 5;
+      while (i > 0) {
+        console.log(i);
+        i--;
+      }
+      //do while
+      do {
+        console.log(i);
+        i++;
+      } while (i != 5);
+
+      //for each
+      var array5 = [1, 2, 3, 4, 5, 6];
+      array5.forEach((element) => {
+        console.log(`array value using for each loop: ${element}`);
+      });
+
+      //function
+      function greetings(name) {
+        console.log(`Greetings! Mr. ${name}`);
+      }
+      greetings("Deepesh");
+
+      //alert
+      alert("Welcome to JavaScript");
+
+      //confirm
+      confirm("Ready to Dive in Baby!!");
+
+      //prompt
+      let username = prompt("Write your name please");
+      greetings(username);
+
+      //this operator
+      function car(make, model, year) {
+        //object constructor
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+      let myCar = new car("Lamborgini", "Super", "2000");
+      console.log(myCar);
+
+      //Bulb triggerer
       const bulbStatus = document.getElementById("bulb");
       let isOn = 0;
       function on() {
